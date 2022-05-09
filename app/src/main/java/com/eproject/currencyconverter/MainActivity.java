@@ -1,8 +1,12 @@
 package com.eproject.currencyconverter;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,9 +25,37 @@ public class MainActivity extends AppCompatActivity {
         - The user can add any currency card of their choosing (Crypto currencies may be added).
     */
 
+    BottomNavigationView bottomNavigationView;
+
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,new currency_fragment()).commit();
+        bottomNavigationView.setSelectedItemId(R.id.nav_currency);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            Fragment fragment = null;
+            switch(item.getItemId()){
+                case R.id.nav_currency:
+                    fragment = new currency_fragment();
+                    break;
+                case R.id.nav_crypto:
+                    fragment = new CryptoFragment();
+                    break;
+                case R.id.nav_aboutus:
+                    fragment = new AboutUsFragment();
+                    break;
+                case R.id.nav_settings:
+                    fragment = new SettingFragment();
+                    break;
+            }
+            assert fragment != null;
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, fragment).commit();
+            return true;
+        });
     }
 }
