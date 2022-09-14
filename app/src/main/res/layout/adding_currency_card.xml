@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner"
+    android:layout_margin="12dp">
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/currency_selector_spinner"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/select_currency"/>
+
+
+    <EditText
+        android:id="@+id/enter_amount_currency"
+        android:background="@drawable/custom_input"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:autofillHints=""
+        android:hint="@string/enter_amount"
+        android:importantForAutofill="no"
+        android:inputType="number|numberDecimal"
+        android:padding="8dp"
+        android:paddingBottom="0dp"
+        android:textAlignment="textEnd"
+        android:textColorHint="#757575">
+    </EditText>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="?android:attr/listDivider" />
+
+    <ImageView
+        android:id="@+id/imageView_remove_currency"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:contentDescription="@string/remove_currency"
+        app:srcCompat="@drawable/ic_close" />
+
+</LinearLayout>

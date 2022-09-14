@@ -35,22 +35,19 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,new currency_fragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,new CurrencyFragment()).commit();
         bottomNavigationView.setSelectedItemId(R.id.nav_currency);
         bottomNavigationView.setOnItemSelectedListener(item -> {
             Fragment fragment = null;
             switch(item.getItemId()){
                 case R.id.nav_currency:
-                    fragment = new currency_fragment();
+                    fragment = new CurrencyFragment();
                     break;
                 case R.id.nav_crypto:
                     fragment = new CryptoFragment();
                     break;
                 case R.id.nav_aboutus:
                     fragment = new AboutUsFragment();
-                    break;
-                case R.id.nav_settings:
-                    fragment = new SettingFragment();
                     break;
             }
             assert fragment != null;

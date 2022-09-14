@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/rounded_corner.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/custom_input.xml" value="0.1865" />
         <entry key="app/src/main/res/drawable/ic_aboutus.xml" value="0.188" />
         <entry key="app/src/main/res/drawable/ic_crypto.xml" value="0.188" />
         <entry key="app/src/main/res/drawable/ic_cryptocirc.xml" value="0.188" />
@@ -11,6 +12,7 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1315" />
         <entry key="app/src/main/res/drawable/ic_setting.xml" value="0.188" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/adding_currency_card.xml" value="0.2546875" />
         <entry key="app/src/main/res/layout/fragment_about_us.xml" value="0.1403985507246377" />
         <entry key="app/src/main/res/layout/fragment_crypto.xml" value="0.1403985507246377" />
         <entry key="app/src/main/res/layout/fragment_currency_fragment.xml" value="0.25" />
